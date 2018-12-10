@@ -1,44 +1,72 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width", initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="script/jquery-3.3.1.js"></script>
 
-    <title>Quiz Board</title>
-  </head>
-  <body>
-    <div class="jumbotron text-center" style="background-color: skyblue;">
-      <h1>Test Page</h1>
-      <p>Answer correctly the below questions.</p>
-    </div>
-    <div class="container">
-      <main>
-        <form class="questionForm" action="index.html" method="post" id="q1"
-        data-question="1">
-        <h2>1. Which of the following is not an African state?</h2>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" , initial-scale=1">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script/jquery-3.3.1.js"></script>
+  <script src="script/quizboard.js"></script>
+
+
+  <title>Quiz Board</title>
+</head>
+
+<body>
+  <div class="container">
+  <div class="jumbotron text-center" style="background-color: skyblue;">
+    <h1><b>Test Page</b></h1>
+    <p>Answer correctly the below questions.</p>
+  </div>
+
+    <div class="main">
+      <form id="quiz" name="quiz">
+
+        <p>1. Which of the following is not an African state?</p>
         <ol type="A">
-          <li><input type="radio" name="q1" value="a" /> Kenya</li>
-          <li><input type="radio" name="q1" value="b" /> Botswana</li>
-          <li><input type="radio" name="q1" value="c" /> Germany</li>
-          <li><input type="radio" name="q1" value="d" /> Uganda</li>
+          <li><input type="radio" name="q1" value="0" class="calc" > Kenya</li>
+          <li><input type="radio" name="q1" value="0" class="calc" > Botswana</li>
+          <li><input type="radio" name="q1" value="1" class="calc" > Germany</li>
+          <li><input type="radio" name="q1" value="0" class="calc" > Uganda</li>
+        </ol>
 
-            </ol>
+        <p>2. Who was the first Kenyan President?</p>
+        <ol type="A">
+          <li><input type="radio" name="q2" value="0" class="calc" > Jaramogi</li>
+          <li><input type="radio" name="q2" value="0" class="calc" > Moi</li>
+          <li><input type="radio" name="q2" value="0" class="calc" > Kibaki</li>
+          <li><input type="radio" name="q2" value="1" class="calc" > Kenyatta</li>
+        </ol>
+
+        <p>3. Which is the largest fresh water lake?</p>
+        <ol type="A">
+          <li><input type="radio" name="q3" value="1" class="calc" > Victoria</li>
+          <li><input type="radio" name="q3" value="0" class="calc" > Turkana</li>
+          <li><input type="radio" name="q3" value="0" class="calc" > Nakuru</li>
+          <li><input type="radio" name="q3" value="0" class="calc" > Elementaita</li>
+        </ol>
+
+        <p>4. Which is the biggest region?</p>
+        <ol type="A">
+          <li><input type="radio" name="q4" value="0" class="calc" > Nyanza</li>
+          <li><input type="radio" name="q4" value="0" class="calc" > Western</li>
+          <li><input type="radio" name="q4" value="1" class="calc" > RiftValley</li>
+          <li><input type="radio" name="q4" value="0" class="calc" > Central</li>
+        </ol>
 
 
+      </form>
+
+      <input type="text" name="sum" value="">
+      <input id="button" type="submit" Value="Submit" onclick="mark();">
+
+      <div id="done">
+        <p id="number_correct"></p>
+    </div>
+  </div>
 
 
-
-
-        </form>
-
-      </main>
-      </div>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-
-  </body>
+</body>
 
 </html>
